@@ -1,0 +1,97 @@
+html {
+    scroll-padding-top: 72px; /* Altura do header */
+}
+
+body {
+    background-color: #fdfaf1;
+    font-family: 'Figtree', sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Layout de largura fixa */
+.site-fixed-layout {
+    width: 390px;
+}
+
+@media (min-width: 768px) {
+    .site-fixed-layout {
+        width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .site-fixed-layout {
+        width: 900px;
+    }
+}
+
+/* Moldura decorativa */
+.moldura-secao-container {
+    position: relative;
+    padding: 2rem
+    overflow: visible;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.moldura-secao-decorativa {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: 0;
+    pointer-events: none;
+
+    width: auto;
+    height: 100%;
+    max-height: none;
+}
+#celebrar {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+/* Ajustes para telas maiores - moldura1 */
+@media (min-width: 768px) {
+    .moldura-secao-container {
+        padding: 3rem;
+    }
+
+    .moldura-secao-decorativa {
+        left: -70px;
+    }
+}
+
+
+/* Estilo para a moldura 2 (Presentes e Contato) */
+.moldura-presentes-contato {
+  position: relative;
+  padding: 2rem;
+  overflow: visible;
+}
+
+.moldura-decorativa {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: auto;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ajuste para telas maiores - Moldura 2 */
+@media (min-width: 768px) {
+    .moldura-presentes-contato {
+        padding: 3rem;
+    }
+    .moldura-decorativa {
+        right: -70px;
+    }
+}
+
+/* Torna o background transparente para a moldura 2 aparecer */
+#presentes, #contato {
+    background-color: transparent;
+}
