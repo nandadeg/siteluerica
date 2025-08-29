@@ -104,3 +104,6 @@ body {
         height: 56%;
     }
 }
+.site-header {
+  border-bottom: none !important;
+}
