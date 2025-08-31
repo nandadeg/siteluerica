@@ -104,6 +104,20 @@ body {
         height: 56%;
     }
 }
+/* Ajuste para telas grandes de desktop - Moldura 1 */
+@media (min-width: 1280px) {
+    .moldura-secao-decorativa {
+        /* Posições maiores para uma tela maior */
+        top: 150px;
+        left: 80px;
+
+        /* A escala pode ser a mesma ou um pouco menor */
+        scale: 160%; 
+        
+        /* A altura pode ser a mesma ou ajustada conforme o gosto */
+        height: 60%;
+    }
+}
 .site-header {
   border-bottom: none !important;
 }
