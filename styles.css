@@ -31,7 +31,7 @@ body {
 /* Moldura decorativa */
 .moldura-secao-container {
     position: relative;
-    padding: 2rem
+    padding: 2rem;
     overflow: visible;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -95,7 +95,7 @@ body {
 #presentes, #contato {
     background-color: transparent;
 }
-/* Ajuste para telas menores - Moldura 1 */
+/* Adjustments for smaller screens - Frame 1 */
 @media (max-width: 768px) {
     .moldura-secao-decorativa {
         top: 150px;
@@ -104,17 +104,17 @@ body {
         height: 56%;
     }
 }
-/* Ajuste para telas grandes de desktop - Moldura 1 */
+/* Adjustments for large desktop screens - Frame 1 */
 @media (min-width: 1280px) {
     .moldura-secao-decorativa {
-        /* Posições maiores para uma tela maior */
+        /* Larger positions for bigger screen */
         top: 150px;
         left: 80px;
 
-        /* A escala pode ser a mesma ou um pouco menor */
+        /* Scale can be the same or slightly smaller */
         scale: 160%; 
         
-        /* A altura pode ser a mesma ou ajustada conforme o gosto */
+        /* Height can be the same or adjusted as desired */
         height: 60%;
     }
 }
