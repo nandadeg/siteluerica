@@ -81,13 +81,10 @@ body {
   pointer-events: none;
 }
 
-/* Ajuste para telas maiores - Moldura 2 */
+/* telas menores Moldura 2 */
 @media (min-width: 768px) {
-    .moldura-presentes-contato {
-        padding: 3rem;
-    }
     .moldura-decorativa {
-        right: -70px;
+        right: -28px;
     }
 }
 
