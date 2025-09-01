@@ -12,27 +12,30 @@ body {
 }
 
 /* Layout de largura fixa */
+/* No seu arquivo styles.css */
+
 .site-fixed-layout {
-    width: 390px;
+  max-width: 390px; /* Em vez de 'width' */
+  width: 100%;      /* Garante que ocupe a tela em dispositivos menores */
 }
 
 @media (min-width: 768px) {
-    .site-fixed-layout {
-        width: 768px;
-    }
+  .site-fixed-layout {
+    max-width: 768px; /* Em vez de 'width' */
+  }
 }
 
 @media (min-width: 1024px) {
-    .site-fixed-layout {
-        width: 900px;
-    }
+  .site-fixed-layout {
+    max-width: 900px; /* Em vez de 'width' */
+  }
 }
 
 /* Moldura decorativa */
 .moldura-secao-container {
     position: relative;
     padding: 2rem;
-    overflow: visible;
+    overflow: hidden;
     margin-bottom: 0;
     padding-bottom: 0;
 }
@@ -68,7 +71,7 @@ body {
 .moldura-presentes-contato {
   position: relative;
   padding: 2rem;
-  overflow: visible;
+  overflow: hidden
 }
 
 .moldura-decorativa {
@@ -96,8 +99,8 @@ body {
 @media (max-width: 768px) {
     .moldura-secao-decorativa {
         top: 150px;
-        left: 28px;
-        scale: 180%;
+        left: 34px;
+        scale: 170%;
         height: 56%;
     }
 }
@@ -105,7 +108,7 @@ body {
 @media (min-width: 1280px) {
     .moldura-secao-decorativa {
         /* Larger positions for bigger screen */
-        top: 150px;
+        top: 170px;
         left: 80px;
 
         /* Scale can be the same or slightly smaller */
