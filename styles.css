@@ -14,6 +14,7 @@ body {
 /* Layout de largura fixa */
 .site-fixed-layout {
     width: 390px;
+    margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -40,10 +41,9 @@ body {
 .moldura-secao-decorativa {
     position: absolute;
     top: 0;
-    left: -50px;
+    left: 0px;
     z-index: 0;
     pointer-events: none;
-
     width: auto;
     height: 100%;
     max-height: none;
@@ -59,7 +59,7 @@ body {
     }
 
     .moldura-secao-decorativa {
-        left: -70px;
+        left: 0px;
     }
 }
 
@@ -74,10 +74,10 @@ body {
 .moldura-decorativa {
   position: absolute;
   top: 0;
-  right: -50px;
+  right: 28px;
   width: auto;
   height: 100%;
-  z-index: 0;
+  scale:140%
   pointer-events: none;
 }
 
@@ -88,6 +88,14 @@ body {
     }
     .moldura-decorativa {
         right: -70px;
+    }
+}
+@media (max-width: 768px) {
+    .moldura-decorativa {
+        top: 150px;
+        right: 28px;
+        scale: 180%;
+        height: 56%;
     }
 }
 
