@@ -87,14 +87,14 @@ body {
         padding: 3rem;
     }
     .moldura-decorativa {
-        right: -70px;
+        right: 0px;
     }
 }
 @media (max-width: 768px) {
     .moldura-decorativa {
         top: 150px;
         right: 28px;
-        scale: 180%;
+        scale: 170%;
         height: 56%;
     }
 }
