@@ -28,7 +28,7 @@ body {
     }
 }
 
-/* Moldura decorativa */
+/* Moldura decorativa 1 */
 .moldura-secao-container {
     position: relative;
     padding: 2rem;
@@ -37,6 +37,7 @@ body {
     padding-bottom: 0;
 }
 
+/* ===== INÍCIO DA CORREÇÃO ===== */
 .moldura-secao-decorativa {
     position: absolute;
     top: 0;
@@ -44,14 +45,18 @@ body {
     z-index: 0;
     pointer-events: none;
 
-    width: auto;
+    /* Propriedades para evitar distorção */
     height: 100%;
-    max-height: none;
+    width: 120px; /* Largura base para a imagem */
+    object-fit: cover; /* Garante que a proporção seja mantida */
+    object-position: left top; /* Alinha a imagem corretamente */
 }
+
 #celebrar {
     margin-bottom: 0;
     padding-bottom: 0;
 }
+
 /* Ajustes para telas maiores - moldura1 */
 @media (min-width: 768px) {
     .moldura-secao-container {
@@ -60,25 +65,27 @@ body {
 
     .moldura-secao-decorativa {
         left: -70px;
+        width: 180px; /* Aumenta a largura para telas maiores */
     }
 }
+/* ===== FIM DA CORREÇÃO ===== */
 
 
 /* Estilo para a moldura 2 (Presentes e Contato) */
 .moldura-presentes-contato {
-  position: relative;
-  padding: 2rem;
-  overflow: visible;
+    position: relative;
+    padding: 2rem;
+    overflow: visible;
 }
 
 .moldura-decorativa {
-  position: absolute;
-  top: 0;
-  right: -50px;
-  width: auto;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: auto;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* Ajuste para telas maiores - Moldura 2 */
@@ -95,12 +102,15 @@ body {
 #presentes, #contato {
     background-color: transparent;
 }
+
 .moldura-mobile1 {
     /* Valores do seu comentário - sinta-se à vontade para ajustar! */
     top: 130px;
     left: 20px;
     scale: 140%;
     height: 70%;
+} /* <<< Correção de sintaxe: Adicionado "}" que faltava */
+
 .site-header {
-  border-bottom: none !important;
+    border-bottom: none !important;
 }
