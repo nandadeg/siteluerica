@@ -14,7 +14,6 @@ body {
 /* Layout de largura fixa */
 .site-fixed-layout {
     width: 390px;
-    margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -41,9 +40,10 @@ body {
 .moldura-secao-decorativa {
     position: absolute;
     top: 0;
-    left: 0px;
+    left: -50px;
     z-index: 0;
     pointer-events: none;
+
     width: auto;
     height: 100%;
     max-height: none;
@@ -59,7 +59,7 @@ body {
     }
 
     .moldura-secao-decorativa {
-        left: 0px;
+        left: -70px;
     }
 }
 
@@ -74,10 +74,10 @@ body {
 .moldura-decorativa {
   position: absolute;
   top: 0;
-  right: 28px;
+  right: -50px;
   width: auto;
   height: 100%;
-  scale:140%
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -87,15 +87,7 @@ body {
         padding: 3rem;
     }
     .moldura-decorativa {
-        right: 0px;
-    }
-}
-@media (max-width: 768px) {
-    .moldura-decorativa {
-        top: 150px;
-        right: 28px;
-        scale: 150%;
-        height: 56%;
+        right: -70px;
     }
 }
 
@@ -103,29 +95,12 @@ body {
 #presentes, #contato {
     background-color: transparent;
 }
-/* Adjustments for smaller screens - Frame 1 */
-@media (max-width: 768px) {
-    .moldura-secao-decorativa {
-        top: 150px;
-        left: 28px;
-        scale: 180%;
-        height: 56%;
-    }
-}
-/* Adjustments for large desktop screens - Frame 1 */
-@media (min-width: 1280px) {
-    .moldura-secao-decorativa {
-        /* Larger positions for bigger screen */
-        top: 150px;
-        left: 80px;
-
-        /* Scale can be the same or slightly smaller */
-        scale: 160%; 
-        
-        /* Height can be the same or adjusted as desired */
-        height: 60%;
-    }
-}
+.moldura-mobile1 {
+    /* Valores do seu comentário - sinta-se à vontade para ajustar! */
+    top: 130px;
+    left: 20px;
+    scale: 140%;
+    height: 70%;
 .site-header {
   border-bottom: none !important;
 }
