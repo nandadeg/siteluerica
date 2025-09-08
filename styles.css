@@ -14,6 +14,7 @@ body {
 /* Layout de largura fixa */
 .site-fixed-layout {
     width: 390px;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -28,89 +29,65 @@ body {
     }
 }
 
-/* Moldura decorativa 1 */
+/* --- ESTILOS BASE DAS MOLDURAS (Aplicado em todas as telas) --- */
 .moldura-secao-container {
     position: relative;
-    padding: 2rem;
-    overflow: visible;
+    padding: 2rem 1.5rem;
     margin-bottom: 0;
-    padding-bottom: 0;
+    
+    background-image: url('https://i.postimg.cc/907ydSSL/moldura1nova.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
 }
 
-/* ===== INÍCIO DA CORREÇÃO ===== */
-.moldura-secao-decorativa {
-    position: absolute;
-    top: 0;
-    left: -50px;
-    z-index: 0;
-    pointer-events: none;
-
-    /* Propriedades para evitar distorção */
-    height: 100%;
-    width: 120px; /* Largura base para a imagem */
-    object-fit: cover; /* Garante que a proporção seja mantida */
-    object-position: left top; /* Alinha a imagem corretamente */
-}
-
-#celebrar {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-/* Ajustes para telas maiores - moldura1 */
-@media (min-width: 768px) {
-    .moldura-secao-container {
-        padding: 3rem;
-    }
-
-    .moldura-secao-decorativa {
-        left: -70px;
-        width: 180px; /* Aumenta a largura para telas maiores */
-    }
-}
-/* ===== FIM DA CORREÇÃO ===== */
-
-
-/* Estilo para a moldura 2 (Presentes e Contato) */
 .moldura-presentes-contato {
     position: relative;
-    padding: 2rem;
-    overflow: visible;
+    padding: 2rem 1.5rem;
+
+    background-image: url('https://i.postimg.cc/qRPsYjXz/moldura2.png'); 
+    background-repeat: no-repeat;
+    background-size: auto 100%;
 }
 
-.moldura-decorativa {
-    position: absolute;
-    top: 0;
-    right: -50px;
-    width: auto;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-}
-
-/* Ajuste para telas maiores - Moldura 2 */
-@media (min-width: 768px) {
-    .moldura-presentes-contato {
-        padding: 3rem;
-    }
-    .moldura-decorativa {
-        right: -70px;
-    }
-}
-
-/* Torna o background transparente para a moldura 2 aparecer */
-#presentes, #contato {
+#celebrar, #presentes, #contato {
+    margin-bottom: 0;
+    padding-bottom: 0;
     background-color: transparent;
 }
 
-.moldura-mobile1 {
-    /* Valores do seu comentário - sinta-se à vontade para ajustar! */
-    top: 130px;
-    left: 20px;
-    scale: 140%;
-    height: 70%;
-} /* <<< Correção de sintaxe: Adicionado "}" que faltava */
 
-.site-header {
-    border-bottom: none !important;
+/* --- AJUSTES PARA DESKTOP (Telas a partir de 768px) --- */
+@media (min-width: 768px) {
+    .moldura-secao-container,
+    .moldura-presentes-contato {
+        padding: 3rem 2rem;
+    }
+
+    /* MOLDURA 1 (Desktop) - Puxada para a esquerda */
+    .moldura-secao-container {
+        background-position: 25% center;
+    }
+
+    /* MOLDURA 2 (Desktop) - Posição correta */
+    .moldura-presentes-contato {
+        background-position: 100% center; /* 100% = right */
+    }
+}
+
+
+/* --- AJUSTES PARA CELULAR (Telas até 767px) --- */
+@media (max-width: 767px) {
+    /* MOLDURA 1 (Mobile) - AGORA COM A IMAGEM VERTICAL CORRETA */
+    .moldura-secao-container {
+        background-image: url('https://i.postimg.cc/GhccPTHv/moldura1cel.png'); 
+        background-size: 340px%; 
+        background-repeat: no-repeat;
+        background-position: -70px 40px; /* Centraliza a imagem */
+        padding: 2rem 1.5rem; /* Adiciona um respiro interno */
+    }
+
+    /* MOLDURA 2 (Mobile) - Puxada para a direita */
+    .moldura-presentes-contato {
+        background-position: 60% center; 
+    }
 }
