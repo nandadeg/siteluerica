@@ -29,17 +29,16 @@ const countdown = () => {
     // Garante que o contador não fique negativo
     const textDay = gap > 0 ? Math.floor(gap / day) : 0;
     const textHour = gap > 0 ? Math.floor((gap % day) / hour) : 0;
-    const textMinute = gap > 0 ? Math.floor((gap % hour) / minute) : 0;
     
     // Seleciona os elementos no DOM
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
-    const minutesEl = document.getElementById('minutes');
+    
 
     // Atualiza o HTML com os valores, garantindo 2 dígitos
     if (daysEl) daysEl.innerText = String(textDay).padStart(2, '0');
     if (hoursEl) hoursEl.innerText = String(textHour).padStart(2, '0');
-    if (minutesEl) minutesEl.innerText = String(textMinute).padStart(2, '0');
+    
 };
 
 // Aguarda o carregamento do conteúdo do DOM para executar os scripts
