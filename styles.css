@@ -85,3 +85,17 @@ body {
     background-repeat: no-repeat !important;
   }
 }
+@media screen and (max-width: 767px) {
+  #boas_vindas {
+    padding-bottom: 0.5rem !important; /* reduz espaço embaixo da imagem */
+  }
+  #programacao {
+    padding-top: 0.5rem !important;    /* reduz espaço acima do título */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #boas_vindas img {
+    margin-top: 0.1rem !important; /* substitui o mt-16 do Tailwind */
+  }
+}
