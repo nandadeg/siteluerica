@@ -70,7 +70,7 @@ body {
 
     /* MOLDURA 2 (Desktop) - Posição correta */
     .moldura-presentes-contato {
-        background-position: 140% center; /* 100% = right */
+        background-position: 150% center; /* 100% = right */
     }
 }
 
