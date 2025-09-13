@@ -77,17 +77,10 @@ body {
 
 /* --- AJUSTES PARA CELULAR (Telas até 767px) --- */
 @media (max-width: 767px) {
-    /* MOLDURA 1 (Mobile) - AGORA COM A IMAGEM VERTICAL CORRETA */
-    .moldura-secao-container {
-        background-image: url('https://i.postimg.cc/GhccPTHv/moldura1cel.png'); 
-        background-size: 340px%; 
-        background-repeat: no-repeat;
-        background-position: -70px 40px; /* Centraliza a imagem */
-        padding: 2rem 1.5rem; /* Adiciona um respiro interno */
-    }
-
-    /* MOLDURA 2 (Mobile) - Puxada para a direita */
+    .moldura-secao-container,
     .moldura-presentes-contato {
-        background-position: 60% center; 
+        background-image: none !important; /* remove as molduras */
+        padding: 2rem 1.5rem; /* mantém o respiro interno */
     }
 }
+
