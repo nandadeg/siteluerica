@@ -75,12 +75,13 @@ body {
 }
 
 
-/* --- AJUSTES PARA CELULAR (Telas até 767px) --- */
-@media (max-width: 767px) {
-    .moldura-secao-container,
-    .moldura-presentes-contato {
-        background-image: none !important; /* remove as molduras */
-        padding: 2rem 1.5rem; /* mantém o respiro interno */
-    }
+/* === FORÇAR: sem molduras até 900px (celulares e alguns tablets) === */
+@media screen and (max-width: 900px) {
+  .moldura-secao-container,
+  .moldura-presentes-contato {
+    background-image: none !important;     /* some a imagem */
+    background-size: auto !important;      /* neutraliza dimensionamento antigo */
+    background-position: center !important;/* neutraliza posição antiga */
+    background-repeat: no-repeat !important;
+  }
 }
-
