@@ -70,8 +70,8 @@ body {
 
     /* MOLDURA 2 (Desktop) - Posição correta */
     .moldura-presentes-contato {
-        background-position: 150% center; /* 100% = right */
-    }
+       background-position: right -140px center; /* empurra ~140px para fora da borda direita */
+}
 }
 
 
@@ -99,3 +99,4 @@ body {
     margin-top: 0.1rem !important; /* substitui o mt-16 do Tailwind */
   }
 }
+@media (min-width: 1024px) { #presentes { margin-bottom: 4rem !important; } }
