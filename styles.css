@@ -34,7 +34,6 @@ body {
     position: relative;
     padding: 2rem 1.5rem;
     margin-bottom: 0;
-    
     background-image: url('https://i.postimg.cc/907ydSSL/moldura1nova.png');
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -42,8 +41,8 @@ body {
 
 .moldura-presentes-contato {
     position: relative;
-    padding: 2rem 1.5rem;
-
+    
+    margin-bottom: 0;
     background-image: url('https://i.postimg.cc/qRPsYjXz/moldura2.png'); 
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -58,10 +57,10 @@ body {
 
 /* --- AJUSTES PARA DESKTOP (Telas a partir de 768px) --- */
 @media (min-width: 768px) {
-    .moldura-secao-container,
-    .moldura-presentes-contato {
-        padding: 3rem 2rem;
+    .moldura-secao-container{
+      padding: 3rem 2rem;
     }
+    
 
     /* MOLDURA 1 (Desktop) - Puxada para a esquerda */
     .moldura-secao-container {
@@ -70,7 +69,7 @@ body {
 
     /* MOLDURA 2 (Desktop) - Posição correta */
     .moldura-presentes-contato {
-       background-position: right 200px center; /* empurra ~140px para fora da borda direita */
+    background-position: calc( (100vw - 768px) / 2 - 40px ) center;
 }
 }
 
@@ -100,3 +99,14 @@ body {
   }
 }
 @media (min-width: 1024px) { #presentes { margin-bottom: 4rem !important; } }
+/* --- ESTILO DO CONTAINER INTERNO DA MOLDURA --- */
+.conteudo-interno {
+  padding: 4rem 3rem; /* Ajuste estes valores como quiser! */
+}
+
+/* Ajuste para telas menores se necessário */
+@media (max-width: 767px) {
+  .conteudo-interno {
+    padding: 3rem 2rem; /* Exemplo de valores para celular */
+  }
+}
