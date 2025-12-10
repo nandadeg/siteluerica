@@ -30,7 +30,7 @@ body {
 }
 
 /* --- ESTILOS BASE DAS MOLDURAS (Aplicado em todas as telas) --- */
-.moldura-secao-container {
+/*.moldura-secao-container {
     position: relative;
     padding: 2rem 1.5rem;
     margin-bottom: 0;
@@ -56,19 +56,19 @@ body {
 
 
 /* --- AJUSTES PARA DESKTOP (Telas a partir de 768px) --- */
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .moldura-secao-container{
       padding: 3rem 2rem;
     }
     
 
     /* MOLDURA 1 (Desktop) - Puxada para a esquerda */
-    .moldura-secao-container {
+   /* .moldura-secao-container {
         background-position: 40% center;
     }
 
     /* MOLDURA 2 (Desktop) - Posição correta */
-    .moldura-presentes-contato {
+    /*.moldura-presentes-contato {
     background-position: calc( (100vw - 768px) / 2 - 40px ) center;
 }
 }
