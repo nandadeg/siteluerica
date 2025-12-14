@@ -1,49 +1,31 @@
-/*
-  NOTA: A configuração do Tailwind foi movida para este arquivo.
-  Em um projeto de produção, o ideal seria usar um arquivo `tailwind.config.js`
-  e um processo de build, em vez de configurar via script.
-*/
-tailwind.config = {
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', 'sans-serif'],
-            }
-        }
-    }
-}
+console.log('JS carregou'); // DEBUG
 
-// Função para o contador regressivo
-const countdown = () => {
-    // Data do evento
-    const countDate = new Date('May 30, 2026 16:00:00').getTime();
+function countdown() {
+    const countDate = new Date(2026, 4, 30, 16, 30, 0).getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
 
-    // Cálculos de tempo
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
+    console.log('gap:', gap); // DEBUG
+
+    const hour = 1000 * 60 * 60;
     const day = hour * 24;
-    
-    // Garante que o contador não fique negativo
-    const textDay = gap > 0 ? Math.floor(gap / day) : 0;
-    const textHour = gap > 0 ? Math.floor((gap % day) / hour) : 0;
-    
-    // Seleciona os elementos no DOM
+
+    const days = gap > 0 ? Math.floor(gap / day) : 0;
+    const hours = gap > 0 ? Math.floor((gap % day) / hour) : 0;
+
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
-    
 
-    // Atualiza o HTML com os valores, garantindo 2 dígitos
-    if (daysEl) daysEl.innerText = String(textDay).padStart(2, '0');
-    if (hoursEl) hoursEl.innerText = String(textHour).padStart(2, '0');
-    
-};
+    if (!daysEl || !hoursEl) {
+        console.error('IDs não encontrados no HTML');
+        return;
+    }
 
-// Aguarda o carregamento do conteúdo do DOM para executar os scripts
+    daysEl.innerText = String(days).padStart(2, '0');
+    hoursEl.innerText = String(hours).padStart(2, '0');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Inicia o contador e o atualiza a cada segundo
     countdown();
-    setInterval(countdown, 1000);
+    setInterval(countdown, 60000);
 });
