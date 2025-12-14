@@ -13,8 +13,7 @@ body {
 
 /* Layout de largura fixa */
 .site-fixed-layout {
-    width: 390px;
-    margin: 0 auto;
+  overflow: visible !important;
 }
 
 @media (min-width: 768px) {
